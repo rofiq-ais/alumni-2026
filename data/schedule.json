@@ -1,0 +1,58 @@
+{
+  "Senin": [
+    { "time": "07:00 – 08:30", "subject": "Tahfidz", "teacher": "Ust. Abdullah", "type": "lesson" },
+    { "time": "08:30 – 10:00", "subject": "Fiqih", "teacher": "Ust. Ibrahim", "type": "lesson" },
+    { "time": "10:00 – 10:15", "subject": "Istirahat", "teacher": "", "type": "break" },
+    { "time": "10:15 – 11:45", "subject": "Bahasa Arab", "teacher": "Ust. Yusuf", "type": "lesson" },
+    { "time": "11:45 – 13:00", "subject": "Ishoma", "teacher": "", "type": "break" },
+    { "time": "13:00 – 14:30", "subject": "Hadits", "teacher": "Ust. Umar", "type": "lesson" },
+    { "time": "14:30 – 15:15", "subject": "Ashar", "teacher": "", "type": "break" },
+    { "time": "15:15 – 16:45", "subject": "Nahwu & Shorof", "teacher": "Ust. Ali", "type": "lesson" }
+  ],
+  "Selasa": [
+    { "time": "07:00 – 08:30", "subject": "Tahfidz", "teacher": "Ust. Abdullah", "type": "lesson" },
+    { "time": "08:30 – 10:00", "subject": "Aqidah", "teacher": "Ust. Hamid", "type": "lesson" },
+    { "time": "10:00 – 10:15", "subject": "Istirahat", "teacher": "", "type": "break" },
+    { "time": "10:15 – 11:45", "subject": "Tafsir", "teacher": "Ust. Mahmud", "type": "lesson" },
+    { "time": "11:45 – 13:00", "subject": "Ishoma", "teacher": "", "type": "break" },
+    { "time": "13:00 – 14:30", "subject": "Sirah Nabawiyah", "teacher": "Ust. Umar", "type": "lesson" },
+    { "time": "14:30 – 15:15", "subject": "Ashar", "teacher": "", "type": "break" },
+    { "time": "15:15 – 16:45", "subject": "Bahasa Arab", "teacher": "Ust. Yusuf", "type": "lesson" }
+  ],
+  "Rabu": [
+    { "time": "07:00 – 08:30", "subject": "Tahfidz", "teacher": "Ust. Abdullah", "type": "lesson" },
+    { "time": "08:30 – 10:00", "subject": "Nahwu & Shorof", "teacher": "Ust. Ali", "type": "lesson" },
+    { "time": "10:00 – 10:15", "subject": "Istirahat", "teacher": "", "type": "break" },
+    { "time": "10:15 – 11:45", "subject": "Fiqih", "teacher": "Ust. Ibrahim", "type": "lesson" },
+    { "time": "11:45 – 13:00", "subject": "Ishoma", "teacher": "", "type": "break" },
+    { "time": "13:00 – 14:30", "subject": "Tajwid", "teacher": "Ust. Hasan", "type": "lesson" },
+    { "time": "14:30 – 15:15", "subject": "Ashar", "teacher": "", "type": "break" },
+    { "time": "15:15 – 16:45", "subject": "Hadits", "teacher": "Ust. Umar", "type": "lesson" }
+  ],
+  "Kamis": [
+    { "time": "07:00 – 08:30", "subject": "Tahfidz", "teacher": "Ust. Abdullah", "type": "lesson" },
+    { "time": "08:30 – 10:00", "subject": "Tafsir", "teacher": "Ust. Mahmud", "type": "lesson" },
+    { "time": "10:00 – 10:15", "subject": "Istirahat", "teacher": "", "type": "break" },
+    { "time": "10:15 – 11:45", "subject": "Aqidah", "teacher": "Ust. Hamid", "type": "lesson" },
+    { "time": "11:45 – 13:00", "subject": "Ishoma", "teacher": "", "type": "break" },
+    { "time": "13:00 – 14:30", "subject": "Muhadharah", "teacher": "Ust. Ibrahim", "type": "lesson" },
+    { "time": "14:30 – 15:15", "subject": "Ashar", "teacher": "", "type": "break" },
+    { "time": "15:15 – 16:45", "subject": "Bahasa Arab", "teacher": "Ust. Yusuf", "type": "lesson" }
+  ],
+  "Jumat": [
+    { "time": "07:00 – 08:30", "subject": "Tahfidz", "teacher": "Ust. Abdullah", "type": "lesson" },
+    { "time": "08:30 – 10:00", "subject": "Muhafadzah", "teacher": "Semua Ustadz", "type": "lesson" },
+    { "time": "10:00 – 12:00", "subject": "Istirahat & Jum'at", "teacher": "", "type": "break" },
+    { "time": "13:30 – 15:00", "subject": "Sirah Nabawiyah", "teacher": "Ust. Umar", "type": "lesson" },
+    { "time": "15:00 – 15:30", "subject": "Ashar", "teacher": "", "type": "break" },
+    { "time": "15:30 – 17:00", "subject": "Tajwid", "teacher": "Ust. Hasan", "type": "lesson" }
+  ],
+  "Sabtu": [
+    { "time": "07:00 – 08:30", "subject": "Tahfidz", "teacher": "Ust. Abdullah", "type": "lesson" },
+    { "time": "08:30 – 10:00", "subject": "Nahwu & Shorof", "teacher": "Ust. Ali", "type": "lesson" },
+    { "time": "10:00 – 10:15", "subject": "Istirahat", "teacher": "", "type": "break" },
+    { "time": "10:15 – 11:45", "subject": "Muhadharah", "teacher": "Ust. Ibrahim", "type": "lesson" },
+    { "time": "11:45 – 13:00", "subject": "Ishoma", "teacher": "", "type": "break" },
+    { "time": "13:00 – 14:30", "subject": "Riyadhah", "teacher": "Semua Ustadz", "type": "lesson" }
+  ]
+}

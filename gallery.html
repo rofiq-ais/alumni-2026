@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Galeri — Ma'had Darul Atsar Alumni 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="gallery">
+<div class="bg-mesh"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+<header class="app-header" id="app-header"></header>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Galeri</h1>
+      <p>Dokumentasi kegiatan dan momen bersama</p>
+    </div>
+    <div id="grid"><div class="loader"><div class="spinner"></div></div></div>
+  </main>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lb" onclick="if(event.target===this)closeLb()">
+  <button class="lb-close" onclick="closeLb()">✕</button>
+  <div class="lb-inner">
+    <img id="lb-img" src="" alt="">
+    <div class="lb-info"><h3 id="lb-title"></h3><p id="lb-desc"></p></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

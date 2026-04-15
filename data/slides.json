@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "image": "slider1.jpg",
+    "label": "Pendidikan",
+    "title": "Ma'had Darul Atsar",
+    "subtitle": "Membangun generasi yang kokoh di atas tauhid dan sunnah dengan pemahaman yang lurus.",
+    "btn": "Lihat Info",
+    "btnHref": "#"
+  },
+  {
+    "id": 2,
+    "image": "slider2.jpg",
+    "label": "Lingkungan",
+    "title": "Lingkungan Nyaman",
+    "subtitle": "Kawasan asri yang menunjang konsentrasi belajar para santri setiap hari.",
+    "btn": "Galeri Foto",
+    "btnHref": "gallery.html"
+  },
+  {
+    "id": 3,
+    "image": "slider3.jpg",
+    "label": "Kegiatan",
+    "title": "KBM Terpadu",
+    "subtitle": "Sistem Kegiatan Belajar Mengajar yang tertata rapi dari pagi hingga malam.",
+    "btn": "Jadwal",
+    "btnHref": "schedule.html"
+  }
+]

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Tugas — Ma'had Darul Atsar Alumni 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tasks">
+<div class="bg-mesh"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+<header class="app-header" id="app-header"></header>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Tugas & PR</h1>
+      <p>Daftar tugas dan pekerjaan rumah kelas</p>
+    </div>
+    <div class="filter-row" id="filters">
+      <button class="btn btn-glass active" data-f="Semua" onclick="setF('Semua')">Semua</button>
+      <button class="btn btn-glass" data-f="Aktif" onclick="setF('Aktif')">⏳ Aktif</button>
+      <button class="btn btn-glass" data-f="Selesai" onclick="setF('Selesai')">✅ Selesai</button>
+    </div>
+    <div id="list"><div class="loader"><div class="spinner"></div></div></div>
+  </main>
+</div>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/tasks.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Merangkum Kitab Tauhid",
+    "description": "Merangkum bab 1 sampai 5 beserta dalil-dalilnya. Ditulis tangan di buku tugas.",
+    "subject": "Aqidah",
+    "deadline": "2026-04-14",
+    "status": "pending",
+    "priority": "high"
+  },
+  {
+    "id": 2,
+    "title": "Hafalan Hadits Arbain",
+    "description": "Setoran hafalan Hadits Arbain ke-1 sampai ke-10 kepada Ustadz pembimbing.",
+    "subject": "Hadits",
+    "deadline": "2026-04-16",
+    "status": "pending",
+    "priority": "medium"
+  },
+  {
+    "id": 3,
+    "title": "Makalah Sejarah Islam",
+    "description": "Membuat ringkasan mengenai sejarah Khulafaur Rasyidin minimal 10 halaman (diketik/word).",
+    "subject": "Tarikh",
+    "deadline": "2026-04-20",
+    "status": "pending",
+    "priority": "low"
+  },
+  {
+    "id": 4,
+    "title": "Latihan Soal Nahwu Wadhih",
+    "description": "Mengerjakan tamrin (latihan soal) di kitab Nahwu Wadhih jilid 2, bab mubtada dan khabar.",
+    "subject": "Bahasa Arab",
+    "deadline": "2026-04-12",
+    "status": "pending",
+    "priority": "medium"
+  },
+  {
+    "id": 5,
+    "title": "Tahsin dan Tajwid",
+    "description": "Ujian praktek membaca Al-Qur'an dengan menerapkan hukum tajwid Nun mati dan Mim mati.",
+    "subject": "Al-Qur'an",
+    "deadline": "2026-04-10",
+    "status": "done",
+    "priority": "high"
+  }
+]

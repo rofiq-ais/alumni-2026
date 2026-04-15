@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Pengumuman — Ma'had Darul Atsar Alumni 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="announcements">
+<div class="bg-mesh"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+<header class="app-header" id="app-header"></header>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Pengumuman</h1>
+      <p>Informasi dan pengumuman terkini dari ma'had</p>
+    </div>
+    <div class="filter-row" id="filters">
+      <button class="btn btn-glass active" data-c="Semua" onclick="setCat('Semua')">Semua</button>
+      <button class="btn btn-glass" data-c="Penting" onclick="setCat('Penting')">🔴 Penting</button>
+      <button class="btn btn-glass" data-c="Kegiatan" onclick="setCat('Kegiatan')">📅 Kegiatan</button>
+      <button class="btn btn-glass" data-c="Info" onclick="setCat('Info')">ℹ️ Info</button>
+    </div>
+    <div id="list"><div class="loader"><div class="spinner"></div></div></div>
+  </main>
+</div>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/announcements.js"></script>
+</body>
+</html>

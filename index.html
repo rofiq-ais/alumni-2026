@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Beranda — Ma'had Darul Atsar Alumni 2026</title>
+  <meta name="description" content="Portal kelas Ma'had Darul Atsar Alumni 2026">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Hero Slider ──────────────────────────────────────────── */
+    .hero-wrap {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 420px;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    }
+    .hero-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      will-change: transform;
+    }
+    .hero-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-slide img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* gradient overlay at bottom */
+    .hero-slide::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.1) 0%,
+        rgba(0,0,0,0.35) 40%,
+        rgba(0,0,0,0.85) 100%
+      );
+    }
+    .hero-content {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 2;
+      padding: 28px 32px;
+    }
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 12px;
+      border-radius: 99px;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.35);
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+    .hero-title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .hero-subtitle {
+      font-size: 14px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.6;
+      max-width: 520px;
+      margin-bottom: 18px;
+    }
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 20px;
+      background: rgba(255,255,255,0.22);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.45);
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .hero-btn:hover { background: rgba(255,255,255,0.35); transform: translateY(-1px); }
+
+    /* Arrows */
+    .hero-arrow {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      z-index: 10;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.6);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      user-select: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .hero-arrow:hover { background: rgba(0,0,0,0.6); transform: translateY(-50%) scale(1.05); }
+    .hero-arrow.prev { left: 14px; }
+    .hero-arrow.next { right: 14px; }
+
+    /* Dots */
+    .hero-dots {
+      position: absolute;
+      bottom: 18px; right: 20px;
+      z-index: 3;
+      display: flex; gap: 6px; align-items: center;
+    }
+    .hero-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .hero-dot.active {
+      background: #fff;
+      width: 22px;
+      border-radius: 99px;
+    }
+
+    /* ── Quote Carousel ────────────────────────────────────────── */
+    .quote-section { margin-bottom: 28px; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--t1);
+    }
+    .quote-nav { display: flex; gap: 6px; }
+    .quote-nav-btn {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--glass);
+      border: 1px solid var(--border-soft);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: background 0.18s;
+      font-size: 14px; color: var(--t2);
+    }
+    .quote-nav-btn:hover { background: var(--glass-hover); color: var(--t1); }
+
+    .quote-track-wrap { overflow: hidden; border-radius: var(--r-lg); }
+    .quote-track {
+      display: flex;
+      transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
+    }
+    .quote-card {
+      min-width: 100%;
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--r-lg);
+      padding: 28px 32px;
+      box-shadow: 0 4px 20px var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .quote-mark {
+      font-size: 52px;
+      line-height: 1;
+      color: var(--accent);
+      opacity: 0.3;
+      font-family: Georgia, serif;
+      margin-bottom: -8px;
+    }
+    .quote-text {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--t1);
+      font-style: italic;
+    }
+    .quote-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .quote-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; color: #fff;
+      flex-shrink: 0;
+    }
+    .quote-author-name { font-size: 13px; font-weight: 600; color: var(--t1); }
+    .quote-author-role { font-size: 11.5px; color: var(--t3); }
+
+    .quote-dots {
+      display: flex; justify-content: center; gap: 6px; margin-top: 12px;
+    }
+    .q-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(0,0,0,0.15);
+      cursor: pointer; transition: all 0.25s;
+    }
+    .q-dot.active { background: var(--accent); width: 18px; border-radius: 99px; }
+
+    /* ── Quick Stats strip ─────────────────────────────────────── */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .stat-strip-item {
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--r-lg);
+      padding: 16px 20px;
+      display: flex; align-items: center; gap: 14px;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    .ssi-icon {
+      width: 44px; height: 44px; border-radius: var(--r);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .ssi-val { font-size: 22px; font-weight: 700; color: var(--t1); line-height: 1; }
+    .ssi-lbl { font-size: 12px; color: var(--t2); margin-top:2px; }
+  </style>
+</head>
+<body data-page="home">
+<header class="app-header" id="app-header"></header>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main-content">
+
+    <!-- ── HERO SLIDESHOW ─────────────────────────────────── -->
+    <div class="hero-wrap" id="hero-wrap">
+      <div class="hero-track" id="hero-track"></div>
+
+      <button class="hero-arrow prev" id="hero-prev"><i data-lucide="chevron-left"></i></button>
+      <button class="hero-arrow next" id="hero-next"><i data-lucide="chevron-right"></i></button>
+      <div class="hero-dots" id="hero-dots"></div>
+    </div>
+
+    <!-- ── QUICK STATS ────────────────────────────────────── -->
+    <div class="stats-strip stagger">
+      <div class="stat-strip-item">
+        <div class="ssi-icon" style="background:var(--accent-dim);color:var(--accent);">
+          <i data-lucide="users" style="width:22px;height:22px;"></i>
+        </div>
+        <div><div class="ssi-val" id="s-students">—</div><div class="ssi-lbl">Total Santri</div></div>
+      </div>
+      <div class="stat-strip-item">
+        <div class="ssi-icon" style="background:var(--red-dim);color:var(--red);">
+          <i data-lucide="clipboard-list" style="width:22px;height:22px;"></i>
+        </div>
+        <div><div class="ssi-val" id="s-tasks">—</div><div class="ssi-lbl">Tugas Aktif</div></div>
+      </div>
+      <div class="stat-strip-item">
+        <div class="ssi-icon" style="background:var(--cyan-dim);color:var(--cyan);">
+          <i data-lucide="megaphone" style="width:22px;height:22px;"></i>
+        </div>
+        <div><div class="ssi-val" id="s-ann">—</div><div class="ssi-lbl">Pengumuman</div></div>
+      </div>
+    </div>
+
+    <!-- ── QUOTE CAROUSEL ────────────────────────────────── -->
+    <div class="quote-section">
+      <div class="section-header">
+        <div>
+          <div class="section-title">💬 Mutiara Kata</div>
+          <p style="font-size:12px;color:var(--t3);margin-top:2px;">Kata-kata inspiratif dari angkatan 2026</p>
+        </div>
+        <div class="quote-nav">
+          <button class="quote-nav-btn" id="q-prev">&#8249;</button>
+          <button class="quote-nav-btn" id="q-next">&#8250;</button>
+        </div>
+      </div>
+
+      <div class="quote-track-wrap">
+        <div class="quote-track" id="quote-track"></div>
+      </div>
+      <div class="quote-dots" id="quote-dots"></div>
+    </div>
+
+    <!-- ── TODAY SCHEDULE + LATEST ANN ──────────────────── -->
+    <div class="two-col">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <span style="font-size:15px;font-weight:700;">📅 Jadwal Hari Ini</span>
+          <a href="schedule.html" style="font-size:12px;color:var(--accent);">Lihat semua →</a>
+        </div>
+        <div class="card" style="padding:16px 18px;">
+          <div id="today-sched"><div class="loader"><div class="spinner"></div></div></div>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <span style="font-size:15px;font-weight:700;">📢 Pengumuman</span>
+          <a href="announcements.html" style="font-size:12px;color:var(--accent);">Lihat semua →</a>
+        </div>
+        <div id="recent-ann"><div class="loader"><div class="spinner"></div></div></div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

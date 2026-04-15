@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Anggota — Ma'had Darul Atsar Alumni 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="students">
+<div class="bg-mesh"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+<header class="app-header" id="app-header"></header>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Anggota Kelas</h1>
+      <p>Santri Ma'had Darul Atsar angkatan 2026 — klik kartu untuk melihat profil lengkap</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;">
+      <input class="input" id="q" placeholder="🔍  Cari nama santri..." oninput="render()" style="max-width:280px;">
+    </div>
+    <div class="filter-row" id="filters"></div>
+    <div id="grid"><div class="loader"><div class="spinner"></div></div></div>
+  </main>
+</div>
+
+<!-- Profile Modal -->
+<div class="modal-overlay" id="profile-modal" onclick="if(event.target===this)closeProfile()" style="position:fixed;">
+  <div class="modal-box" style="position:relative;">
+    <button class="modal-close" onclick="closeProfile()">✕</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/students.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "0001",
+    "profile": "img1.png",
+    "nama": "Fariz Ghufron",
+    "ttl": "Sintang, 22 Juni 2006",
+    "alamat": "JL.Yc. Oevang Oeray, Kamp. Griya Wisata Parmai, Blok C.12",
+    "email": "-",
+    "ig": "kiki_varezha626",
+    "wa": "6282254655476",
+    "quote": "Hidup terlalu singkat untuk memikirkan pereasaan orang lain. Perasaanmu jauh lebih penting",
+    "role": "Sekretaris"
+  },
+  {
+    "id": "0002",
+    "profile": "img2.jpg",
+    "nama": "Fariz Ghufron 'Ainur Rofiq",
+    "ttl": "Cilacap, 05 Mei 2005",
+    "alamat": "Dk.Bugel, RT28, Ds. Kebonromo, Kec. Ngrampal, Kab. Sragen, Jawa Tengah",
+    "email": "gar.fariz01@gmail.com",
+    "ig": "FGAR5505",
+    "wa": "6281390072095",
+    "quote": "Kunci bertahan hidup bukan hanya mempertahankan harapan. Tapi menerima kehidupan itu sendiri",
+    "role": "Sekretaris"
+  },
+  {
+    "id": "0003",
+    "profile": "img3.jpg",
+    "nama": "Suwanda Azhari",
+    "ttl": "Rawa Sari, 05 Oktober 2004",
+    "alamat": "Dusun VI, RT000, RW000, Kel. Aek Kuasan Kec. Aek Kuasan Kab. Asahan Sumatera Utara",
+    "email": "suandaazhari65@gmail.com",
+    "ig": "Dzhar 01",
+    "wa": "6285183379205",
+    "quote": "Janganlah kamu bersikap lemah dan janganlah kamu bersedih hati, padahal kamu adalah orang yang tinggi derajatnya jika kamu termasuk orang yang beriman",
+    "role": "Sarpras"
+  },
+  {
+    "id": "0004",
+    "profile": "img4.jpg",
+    "nama": "Muhammad Nurdin Faqih",
+    "ttl": "Tegal, 22 Juli 2005",
+    "alamat": "Kampung Bugis, JL. Matahari RT63, Tarakan Barat, Kalimantan Utara",
+    "email": "-",
+    "ig": "@KOMANG.TIGA",
+    "wa": "6285705685239",
+    "quote": "Tentang putus asa. Kalau dia ada, sumur zamzam gak bakal ada.",
+    "role": "Sekretaris"
+  },
+  {
+    "id": "0005",
+    "profile": "img5.jpg",
+    "nama": "Teuku Muhammad Naufal Nazhib",
+    "ttl": "Aceh, Langsa, 04 Agustus 2002",
+    "alamat": "Paya Bujuk Seuleumak JL. Pendidikan, No. 6B, Aceh Langsa",
+    "email": "-",
+    "ig": "naufalnazhiib_",
+    "wa": "6282142909618",
+    "quote": "Setiap masa ada orangnya, setiap orang ada masanya.",
+    "role": "Anggota"
+  },
+  {
+    "id": "0006",
+    "profile": "img5.jpg",
+    "nama": "Muhammad Al Husein",
+    "ttl": "Temanggung, 18 Mei 2005",
+    "alamat": "JL. Kedu, Kalisat, Bulu, Temanggung, RT006, RW002 Jawa Tengah",
+    "email": "-",
+    "ig": "suhen_xshot",
+    "wa": "62856416622249",
+    "quote": "Bumi ini luas, tapi untungnya kita bertemu",
+    "role": "Bendahara"
+  },
+  {
+    "id": "0007",
+    "profile": "img5.jpg",
+    "nama": "Yahya bin Pujiyanto",
+    "ttl": "Ambon, 23 Februari 2025",
+    "alamat": "Manggar, Balikpapan Timur, Kalimantan Timur",
+    "email": "-",
+    "ig": "",
+    "wa": "",
+    "quote": "Sakit karena gagal, lebih baik daripada menyesal karena takut gagal",
+    "role": "Anggota"
+  },
+  {
+    "id": "0008",
+    "profile": "img5.jpg",
+    "nama": "Sufyan (Abu Ubaidah)",
+    "ttl": "Pemalang, 3 Maret 2005",
+    "alamat": "Ma'had Tamamul Minnah, Kec. Majalaya, Bengle, Karawang Timur, Jawa Barat",
+    "email": "-",
+    "ig": "",
+    "wa": "6289683637200",
+    "quote": "وماخلقت الجن والإنس إلا ليعبدون",
+    "role": "Anggota"
+  },
+  {
+    "id": "0009",
+    "profile": "img5.jpg",
+    "nama": "Muhammad Ardan Pratama (Pak Kur / King Dan)",
+    "ttl": "Wonosobo, 18 Juni 2004",
+    "alamat": "Bangsri, RT25/RW1, Wonosobo",
+    "email": "ardanprtm@gmail.com",
+    "ig": "kindanjoyy",
+    "wa": "6282298259875",
+    "quote": "Lana don't say: I love you. Lana said: Dear lord when i got to heaven. Please let me bring my man.",
+    "role": "Anggota"
+  }
+]

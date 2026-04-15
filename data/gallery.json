@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Kajian Ilmiah",
+    "description": "Dokumentasi kajian rutin santri Ma'had Darul Atsar.",
+    "date": "2024-02-14",
+    "photo": "assets/img/gallery/img2.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Kegiatan Belajar",
+    "description": "Suasana KBM di ruang kelas bersama Asatidzah.",
+    "date": "2024-03-20",
+    "photo": "assets/img/gallery/img3.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Olahraga Santri",
+    "description": "Kegiatan fisik dan olahraga pagi bersama rekan angkatan.",
+    "date": "2024-05-10",
+    "photo": "assets/img/gallery/img4.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Kerja Bakti",
+    "description": "Semangat gotong royong membersihkan area pesantren.",
+    "date": "2024-07-22",
+    "photo": "assets/img/gallery/img5.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Kebersamaan Angkatan",
+    "description": "Momen kebersamaan seluruh santri angkatan 2026.",
+    "date": "2025-01-15",
+    "photo": "assets/img/gallery/slider1.jpg"
+  }
+]
