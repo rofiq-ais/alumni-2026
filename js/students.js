@@ -30,7 +30,7 @@ function render() {
     const av = s.profile
       ? `<img src="assets/img/profile/${s.profile}" class="avatar" alt="${s.nama}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="avatar" style="background:${col};display:none;">${getInitials(s.nama)}</div>`
       : `<div class="avatar" style="background:${col};">${getInitials(s.nama)}</div>`;
-    return `<div class="card student-card" onclick='openProfile(${JSON.stringify(s)})'>
+    return `<div class="card student-card" onclick="openProfileById('${s.id}')">
       ${av}
       <div><div class="student-name">${s.nama}</div>
       <div style="margin:5px 0"><span class="badge ${roleBadge(s.role)}">${s.role}</span></div></div>
@@ -41,6 +41,11 @@ function render() {
 function roleBadge(r){ return {Ketua:'bp','Wakil Ketua':'bc',Sekretaris:'bg',Bendahara:'by'}[r]||'bgr'; }
 
 // ── Profile modal ──────────────────────────────────────────────────────────────
+function openProfileById(id) {
+  const s = all.find(x => x.id === id);
+  if (s) openProfile(s);
+}
+
 function openProfile(s) {
   const col = avatarColor(s.id);
   const av = s.profile
