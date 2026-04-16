@@ -1,31 +1,19 @@
 // home.js — Beranda dengan hero slider + quote carousel
 
 document.addEventListener("DOMContentLoaded", async () => {
-  // Fetch all data
-  const [slides, students, tasks, announcements, schedule] = await Promise.all([
+  // Fetch only needed data
+  const [slides, students] = await Promise.all([
     fetch("data/slides.json")
       .then((r) => r.json())
       .catch(() => []),
     fetch("data/students.json")
       .then((r) => r.json())
       .catch(() => []),
-    fetch("data/tasks.json")
-      .then((r) => r.json())
-      .catch(() => []),
-    fetch("data/announcements.json")
-      .then((r) => r.json())
-      .catch(() => []),
-    fetch("data/schedule.json")
-      .then((r) => r.json())
-      .catch(() => ({})),
   ]);
 
-  // Stats
-  document.getElementById("s-students").textContent = students.length;
-  document.getElementById("s-tasks").textContent = tasks.filter(
-    (t) => t.status === "pending",
-  ).length;
-  document.getElementById("s-ann").textContent = announcements.length;
+  // Stats - Only students
+  const sStud = document.getElementById("s-students");
+  if (sStud) sStud.textContent = students.length;
 
   // Hero Slider
   initHeroSlider(slides);
@@ -33,42 +21,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Quote Carousel (pakai quote dari students)
   const quotes = students.filter((s) => s.quote);
   initQuoteCarousel(quotes);
-
-  // Today's Schedule
-  const today = todayName();
-  const todaySched = (schedule[today] || [])
-    .filter((s) => s.type === "lesson")
-    .slice(0, 5);
-  const schEl = document.getElementById("today-sched");
-  schEl.innerHTML = todaySched.length
-    ? todaySched
-        .map(
-          (s) => `
-        <div style="display:flex;gap:12px;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.06);">
-          <div style="min-width:110px;font-size:11.5px;color:var(--t3);font-weight:500;">${s.time}</div>
-          <div style="font-size:13px;font-weight:600;color:var(--t1);">${s.subject}
-            <div style="font-size:11.5px;font-weight:400;color:var(--t2);">${s.teacher}</div>
-          </div>
-        </div>`,
-        )
-        .join("")
-    : `<p style="color:var(--t2);text-align:center;padding:16px;">Tidak ada jadwal hari ini 🎉</p>`;
-
-  // Recent Announcements
-  const annEl = document.getElementById("recent-ann");
-  annEl.innerHTML = announcements
-    .slice(0, 3)
-    .map(
-      (a) => `
-    <div class="card ann-card" style="margin-bottom:10px;cursor:pointer;" onclick="location.href='announcements.html'">
-      <div class="ann-meta">
-        <span class="badge ${catBadge(a.category)}">${a.category}</span>
-        <span class="ann-date">${formatDate(a.date)}</span>
-      </div>
-      <div class="ann-title" style="font-size:13.5px;">${a.title}</div>
-    </div>`,
-    )
-    .join("");
 
   if (typeof lucide !== "undefined") lucide.createIcons();
 });

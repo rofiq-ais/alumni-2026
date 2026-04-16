@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutiara Kata — Ma'had Darul Atsar Alumni 2026</title>
+  <meta name="description" content="Kumpulan nasihat dan mutiara kata dari alumni Ma'had Darul Atsar 2026">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="quotes">
+<header class="app-header" id="app-header"></header>
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main-content">
+    
+    <div class="page-header">
+      <h1>💬 Mutiara Kata</h1>
+      <p>Nasihat dan inspirasi dari keluarga besar Alumni 2026</p>
+    </div>
+
+    <div class="quotes-layout stagger">
+      <!-- Left: Quote Display Area -->
+      <div class="quote-viewer">
+        <div class="card quote-main-card" id="active-quote-card">
+          <button class="btn-glass copy-btn" id="copy-quote-btn">
+            <i data-lucide="copy" style="width:14px;height:14px;"></i>
+            <span>Salin</span>
+          </button>
+          
+          <div class="quote-mark" style="text-align: left; margin-bottom: 20px;">“</div>
+          <div class="quote-text" id="display-quote">Memuat...</div>
+          <div class="quote-mark" style="text-align: right; margin-top: -10px;">”</div>
+          
+          <div class="quote-author">
+            <div class="quote-avatar avatar" id="display-avatar">—</div>
+            <div>
+              <div class="quote-author-name" id="display-name" style="font-size: 16px; font-weight: 700;">Memuat Nama...</div>
+              <div class="quote-author-role" id="display-role">...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Students list (Contacts Style) -->
+      <div class="student-contacts">
+        <div class="contacts-header">
+          <h2>Daftar Anggota</h2>
+        </div>
+        <div class="contacts-list" id="contacts-list">
+          <div class="loader"><div class="spinner"></div></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/quotes.js"></script>
+</body>
+</html>

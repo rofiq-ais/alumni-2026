@@ -444,3 +444,281 @@ tbody tr:hover td{background:rgba(255,255,255,.25);}
 .task-dl{font-size:11.5px;color:var(--t3);}
 .task-dl.overdue{color:var(--red);}
 .task-dl.soon{color:var(--gold);}
+
+/* ── Quotes Page Layout ───────────────────────── */
+.quotes-layout {
+  display: flex;
+  gap: 24px;
+  height: calc(100vh - var(--header-h) - 60px);
+  min-height: 500px;
+}
+
+.quote-viewer {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.quote-main-card {
+  width: 100%;
+  max-width: 700px;
+  padding: 60px 40px;
+  position: relative;
+  animation: quoteIn 0.5s var(--ease) both;
+}
+
+@keyframes quoteIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.quote-viewer .quote-text {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--t1);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.quote-viewer .quote-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.quote-viewer .quote-avatar {
+  width: 64px;
+  height: 64px;
+  font-size: 22px;
+}
+
+/* Contact List Sidebar */
+.student-contacts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--glass);
+  backdrop-filter: blur(30px) saturate(150%);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: 0 8px 32px var(--shadow);
+}
+
+.contacts-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-soft);
+  background: rgba(255,255,255,0.1);
+}
+
+.contacts-header h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--t1);
+}
+
+.contacts-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  margin-bottom: 4px;
+}
+
+.contact-item:hover {
+  background: var(--glass-hover);
+}
+
+.contact-item.active {
+  background: var(--glass-act);
+  border-color: var(--border);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.contact-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: #fff;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow: hidden;
+}
+
+.contact-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--t1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-role {
+  font-size: 10.5px;
+  color: var(--t3);
+}
+
+.copy-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 8px 14px;
+  font-size: 11px;
+  border-radius: var(--r-full);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.8;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+  background: var(--glass-hover);
+  transform: translateY(-1px);
+}
+
+.copy-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .quotes-layout {
+    flex-direction: column;
+    height: auto;
+  }
+  .quote-viewer {
+    padding: 20px;
+    order: 1;
+  }
+  .student-contacts {
+    height: 400px;
+    order: 2;
+  }
+  .quote-viewer .quote-text {
+    font-size: 22px;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE OVERHAUL (Mobile First)
+   Targeting < 768px for Sidebar -> Bottom Dock
+═══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-w: 0px; /* Sidebar no longer occupies left space */
+  }
+
+  /* 1. Header: Hide navigation links to save space */
+  .app-header {
+    justify-content: space-between;
+    padding: 0 14px;
+  }
+  .header-nav {
+    display: none;
+  }
+  .header-brand {
+    min-width: auto;
+    padding-left: 0;
+  }
+  .header-right {
+    min-width: auto;
+    margin-left: auto;
+  }
+
+  /* 2. Sidebar: Transform into Bottom Dock */
+  .sidebar {
+    top: auto;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    height: 64px;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 10px;
+    border-radius: var(--r-xl);
+    box-shadow: 0 -4px 30px var(--shadow-lg);
+  }
+
+  .side-item {
+    width: 48px;
+    height: 48px;
+    flex: 1;
+  }
+
+  .side-item::after {
+    display: none; /* No tooltips on mobile */
+  }
+
+  .side-divider {
+    display: none;
+  }
+
+  .sidebar div[style*="flex-grow: 1"] {
+    display: none;
+  }
+
+  /* 3. Main Content: Adjust padding for bottom dock */
+  .main-content {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 100px; /* Space for dock */
+  }
+
+  /* 4. Grids: Stack everything */
+  .g2, .g3, .g4, .ga, .two-col, .stats-strip {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stat-strip-item {
+    padding: 12px 16px;
+  }
+  
+  .hero-wrap {
+    height: 320px;
+  }
+  .hero-title {
+    font-size: 24px;
+  }
+  .hero-content {
+    padding: 20px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .brand-name { font-size: 11px; }
+  .user-info { display: none; }
+  .user-chip { padding: 4px; }
+  .header-brand { padding-left: 0; }
+}
+
+

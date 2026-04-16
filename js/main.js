@@ -2,11 +2,9 @@
 
 const NAV = [
   { page:'home',          href:'index.html',          icon:'house',          label:'Beranda' },
-  { page:'students',      href:'students.html',        icon:'users',          label:'Anggota' },
-  { page:'schedule',      href:'schedule.html',        icon:'calendar-days',  label:'Jadwal' },
-  { page:'announcements', href:'announcements.html',   icon:'megaphone',      label:'Pengumuman' },
-  { page:'gallery',       href:'gallery.html',         icon:'images',         label:'Galeri' },
-  { page:'tasks',         href:'tasks.html',           icon:'clipboard-list', label:'Tugas' },
+  { page:'students',      href:'students.html',       icon:'users',          label:'Anggota' },
+  { page:'gallery',       href:'gallery.html',        icon:'images',         label:'Galeri' },
+  { page:'quotes',        href:'quotes.html',         icon:'quote',          label:'Mutiara' },
 ];
 
 function renderLayout() {
