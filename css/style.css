@@ -37,6 +37,26 @@
   --ease: cubic-bezier(0.4,0,0.2,1);
 }
 
+[data-theme="dark"] {
+  --glass:      rgba(30,30,40,0.45);
+  --glass-hover:rgba(40,40,55,0.60);
+  --glass-act:  rgba(50,50,70,0.75);
+  --border:     rgba(255,255,255,0.12);
+  --border-soft:rgba(255,255,255,0.06);
+  --shadow:     rgba(0,0,0,0.3);
+  --shadow-lg:  rgba(0,0,0,0.5);
+
+  /* Text (light for dark theme) */
+  --t1: #f3f4f6;
+  --t2: rgba(243,244,246,0.75);
+  --t3: rgba(243,244,246,0.45);
+
+  /* Adjust Accent for dark background */
+  --accent:      #a07850;
+  --accent-dim:  rgba(160,120,80,0.18);
+  --accent-glow: rgba(160,120,80,0.35);
+}
+
 /* ── Reset ───────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 a{text-decoration:none;color:inherit;}
@@ -52,6 +72,11 @@ body {
   /* Warm sandy background like image */
   background: linear-gradient(145deg, #ddd6cc 0%, #ccc3b9 40%, #bfb6ac 100%);
   background-attachment: fixed;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+[data-theme="dark"] body {
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 40%, #020617 100%);
 }
 
 /* ── Noise texture overlay for glass feel ─────── */
@@ -97,17 +122,17 @@ body::before {
   padding-left: 10px;
 }
 .brand-name {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
   color: var(--t1);
-  letter-spacing: 0.03em;
+  letter-spacing: -0.01em;
   white-space: nowrap;
 }
 .brand-year {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--t3);
   letter-spacing: 0.05em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* Center zone — nav links */

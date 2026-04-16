@@ -30,8 +30,8 @@ function renderLayout() {
 
       <!-- Right: Actions -->
       <div class="header-right">
-        <button class="header-icon-btn" title="Notifikasi">
-          <i data-lucide="bell" style="width:16px;height:16px;"></i>
+        <button class="header-icon-btn" id="theme-toggle" title="Ganti Tema">
+          <i data-lucide="${document.documentElement.dataset.theme === 'dark' ? 'sun' : 'moon'}" style="width:16px;height:16px;"></i>
         </button>
         <div class="user-chip">
           <div class="user-avatar">MDA</div>
@@ -42,6 +42,9 @@ function renderLayout() {
         </div>
       </div>
     `;
+
+    // Attach toggle event
+    document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
   }
 
   // ── Sidebar — narrow, icon only ────────────────────────────────────────────
@@ -60,6 +63,22 @@ function renderLayout() {
   }
 
   if (typeof lucide !== 'undefined') lucide.createIcons();
+}
+
+// ── Theme management ──────────────────────────────────────────────────────────
+function initTheme() {
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.dataset.theme = saved;
+}
+
+function toggleTheme() {
+  const cur = document.documentElement.dataset.theme;
+  const next = cur === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('theme', next);
+  
+  // Re-render layout to update icon
+  renderLayout();
 }
 
 // ── Utilities ─────────────────────────────────────────────────────────────────
@@ -92,4 +111,5 @@ function showEmpty(id, msg = 'Tidak ada data') {
     </div>`;
 }
 
+initTheme();
 document.addEventListener('DOMContentLoaded', renderLayout);
